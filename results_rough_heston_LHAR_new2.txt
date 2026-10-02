@@ -1,0 +1,47 @@
+======================================================================
+  RoughHeston  +  LHAR
+======================================================================
+
+--- Structural Parameter Estimates ---
+
+  Parameter            Estimate
+  ---------            --------
+  lambda               0.027268
+  theta                0.534907
+  nu                  13.633358
+  rho                  0.379177
+  H                    0.048007
+
+  Objective (chi2)    = 701.249888
+  Objective OOS chi2  = 705.827132  (ratio 1.007)
+  Cross-restart H spread = 0.3981
+
+--- Auxiliary Parameters: Empirical vs Simulated at Optimum ---
+
+  Parameter     Empirical    Simulated         Diff     SE(diff)    t_stat   chi2_i
+  ---------     ---------    ---------         ----     --------    ------   ------
+  alpha          0.370805     0.818095     0.447290     0.002823    158.44    23.01
+  beta_d         0.249254     0.555875     0.306621     0.000743    412.42  -526.61
+  beta_w         0.384238     0.280545    -0.103693     0.001052    -98.53   225.34
+  beta_m         0.269332    -0.009576    -0.278907     0.000890   -313.42   681.33
+  gamma_d       -0.011903     0.001056     0.012960     0.000036    356.71   222.90
+  gamma_w       -0.015881     0.001988     0.017869     0.000080    224.64    80.03
+  gamma_m        0.003552    -0.000064    -0.003616     0.000144    -25.20    -4.86
+  var(eps)       0.262058     0.260443    -0.001615     0.000326     -4.96     0.11
+
+  Sum chi2_i = 701.2499   (total chi^2 = 701.2499)
+  |t| > 2 on: alpha, beta_d, beta_w, beta_m, gamma_d, gamma_w, gamma_m, var(eps) -> these moments are misfitted beyond MC noise.
+
+--- Derived Quantities ---
+
+  Hurst exponent H              : 0.0480
+  Volterra exponent alpha       : 0.5480
+  Mean-reversion lambda (1/day) : 0.0273
+  Effective half-life (days)    : 25.42
+  Long-run variance theta       : 0.534907  (annualized = 134.7965)
+  Long-run volatility (ann.)    : 11.6102
+  Vol-of-vol nu                 : 13.6334
+  Feller-type ratio 2 theta/nu^2: 0.0058
+  Leverage rho                  : 0.3792
+
+======================================================================

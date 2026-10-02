@@ -1,0 +1,418 @@
+Rough Heston + LHAR estimation (NEW2: adaptive relaunch)
+Started: 26-May-2026 21:51:09
+
+========================================
+  ROUGH HESTON + LHAR  (NEW2)
+========================================
+
+Stage 1: CMA-ES (10 seeds, LHS-initialised, adaptive relaunch)...
+
+--- Stage 1 restart 1 ---
+Initial mean: [ 33.0644 1.1467 13.0301 -0.5055 0.1223]
+CMA-ES: d=5, lambda=20, mu=10, mu_eff=5.94
+CMA-ES gen   1: fbest = 5.014132e+04, sigma = 4.7986e+00, mean_x =   37.7798    1.6513    6.2685   -0.4666    0.2192 
+CMA-ES gen  10: fbest = 1.986089e+04, sigma = 2.6634e+00, mean_x =   45.7060    0.8259    0.0112   -0.4915    0.2167 
+CMA-ES gen  20: fbest = 1.801223e+04, sigma = 1.1896e+00, mean_x =   46.6116    0.3700    0.0601   -0.2578    0.3168 
+CMA-ES gen  30: fbest = 1.721192e+04, sigma = 4.6075e-01, mean_x =   48.0222    0.3624    0.2523   -0.3025    0.3092 
+CMA-ES gen  40: fbest = 1.717920e+04, sigma = 1.9906e-01, mean_x =   48.3624    0.3614    0.2652   -0.2579    0.3079 
+CMA-ES gen  50: fbest = 1.715358e+04, sigma = 8.7947e-02, mean_x =   48.1687    0.3622    0.2583   -0.2536    0.3093 
+CMA-ES gen  60: fbest = 1.715358e+04, sigma = 4.5315e-02, mean_x =   48.1303    0.3620    0.2579   -0.2465    0.3100 
+CMA-ES gen  70: fbest = 1.715119e+04, sigma = 4.8647e-02, mean_x =   48.1057    0.3618    0.2578   -0.2464    0.3116 
+CMA-ES gen  80: fbest = 1.715039e+04, sigma = 4.7528e-02, mean_x =   48.0861    0.3625    0.2580   -0.2377    0.3118 
+CMA-ES gen  90: fbest = 1.714913e+04, sigma = 2.5175e-02, mean_x =   48.0921    0.3627    0.2581   -0.2351    0.3116 
+CMA-ES stop: TolFun (eff = 1.7149e+00) reached at gen 90
+Restart 1: chi2 = 17149.131334, par = [48.0849 0.3628 0.2581 -0.2390 0.3118]
+
+--- Stage 1 restart 2 ---
+Initial mean: [ 43.5829 1.8013 5.7621 0.2662 0.1043]
+CMA-ES: d=5, lambda=20, mu=10, mu_eff=5.94
+CMA-ES gen   1: fbest = 2.839025e+04, sigma = 4.0888e+00, mean_x =   37.3750    1.4578    0.8301    0.2179    0.1188 
+CMA-ES gen  10: fbest = 1.999479e+04, sigma = 2.4275e+00, mean_x =   39.6954    0.5045    0.0100   -0.3146    0.1990 
+CMA-ES gen  20: fbest = 1.800856e+04, sigma = 1.1774e+00, mean_x =   36.8702    0.3744    0.0498   -0.4405    0.1778 
+CMA-ES gen  30: fbest = 1.653237e+04, sigma = 7.5403e-01, mean_x =   30.8865    0.1655    0.2264   -0.2842    0.1316 
+CMA-ES gen  40: fbest = 1.644719e+04, sigma = 3.8185e-01, mean_x =   30.9622    0.1500    0.2570   -0.1493    0.1294 
+CMA-ES gen  50: fbest = 1.564272e+04, sigma = 2.5285e+00, mean_x =   13.0619    0.3130    0.3100    0.4005    0.1638 
+CMA-ES gen  60: fbest = 6.607012e+03, sigma = 3.3927e+00, mean_x =    2.9952    0.3524    0.3620    0.3237    0.0932 
+CMA-ES gen  70: fbest = 6.152268e+03, sigma = 1.9222e+00, mean_x =    1.0686    0.3628    0.3150    0.4617    0.0907 
+CMA-ES gen  80: fbest = 5.671156e+03, sigma = 2.0243e+00, mean_x =    0.5773    0.3164    0.3767    0.0847    0.0757 
+CMA-ES gen  90: fbest = 4.586683e+03, sigma = 2.0414e+00, mean_x =    0.3725    0.3276    0.4475   -0.1089    0.1126 
+CMA-ES gen 100: fbest = 3.506880e+03, sigma = 5.1649e+00, mean_x =    0.3547    0.3152    0.6543   -0.1146    0.1947 
+CMA-ES gen 110: fbest = 2.819592e+03, sigma = 6.8587e+00, mean_x =    0.3108    0.3581    0.8773   -0.1439    0.3032 
+CMA-ES gen 120: fbest = 1.845842e+03, sigma = 1.7284e+01, mean_x =    0.1571    0.5151    1.4388   -0.2210    0.4062 
+CMA-ES gen 130: fbest = 1.453232e+03, sigma = 1.9833e+01, mean_x =    0.1691    0.5233    2.0733   -0.0523    0.1721 
+CMA-ES gen 140: fbest = 1.344432e+03, sigma = 1.1261e+01, mean_x =    0.1603    0.6531    2.7727    0.0510    0.1093 
+CMA-ES gen 150: fbest = 1.065607e+03, sigma = 2.3833e+01, mean_x =    0.1272    0.5349    3.1947    0.2144    0.1023 
+CMA-ES gen 160: fbest = 9.487736e+02, sigma = 1.8882e+01, mean_x =    0.0985    0.5162    4.0003    0.2789    0.0720 
+CMA-ES gen 170: fbest = 8.546217e+02, sigma = 2.3953e+01, mean_x =    0.0739    0.5057    5.0914    0.2888    0.0497 
+CMA-ES gen 180: fbest = 8.095845e+02, sigma = 4.1539e+01, mean_x =    0.0597    0.5309    6.5703    0.3757    0.0732 
+CMA-ES gen 190: fbest = 7.818177e+02, sigma = 3.4927e+01, mean_x =    0.0506    0.5679    7.8379    0.2810    0.0590 
+CMA-ES gen 200: fbest = 7.448108e+02, sigma = 6.5421e+01, mean_x =    0.0374    0.5068    9.6952    0.2910    0.0474 
+CMA-ES gen 210: fbest = 7.136144e+02, sigma = 5.2707e+01, mean_x =    0.0318    0.5440   11.8829    0.3267    0.0456 
+CMA-ES gen 220: fbest = 7.035720e+02, sigma = 4.0024e+01, mean_x =    0.0282    0.5452   13.2593    0.3210    0.0408 
+CMA-ES gen 230: fbest = 7.015423e+02, sigma = 2.8039e+01, mean_x =    0.0275    0.5380   13.5923    0.3653    0.0439 
+CMA-ES gen 240: fbest = 7.014704e+02, sigma = 2.3893e+01, mean_x =    0.0273    0.5301   13.5517    0.3798    0.0473 
+CMA-ES gen 250: fbest = 7.012783e+02, sigma = 1.0517e+01, mean_x =    0.0273    0.5339   13.6069    0.3744    0.0481 
+CMA-ES stop: TolFun (eff = 7.0128e-02) reached at gen 255
+Restart 2: chi2 = 701.276829, par = [0.0272 0.5346 13.6237 0.3731 0.0481]
+
+--- Stage 1 restart 3 ---
+Initial mean: [ 26.8556 4.7960 24.3541 -0.8486 0.0612]
+CMA-ES: d=5, lambda=20, mu=10, mu_eff=5.94
+CMA-ES gen   1: fbest = 4.406086e+06, sigma = 4.6862e+00, mean_x =   34.3890    4.4232   21.6593   -0.8690    0.1961 
+CMA-ES gen  10: fbest = 2.003667e+04, sigma = 6.4352e+00, mean_x =   33.2667    1.7177    0.7254    0.5885    0.3509 
+CMA-ES gen  20: fbest = 1.498034e+04, sigma = 2.9516e+00, mean_x =    5.2349    0.6605    0.1661    0.5723    0.4156 
+CMA-ES gen  30: fbest = 6.222416e+03, sigma = 1.4211e+00, mean_x =    2.1023    0.4154    0.5251    0.3885    0.4147 
+CMA-ES gen  40: fbest = 3.623869e+03, sigma = 1.2599e+00, mean_x =    0.3017    0.5615    0.8103    0.1867    0.3916 
+CMA-ES gen  50: fbest = 2.757383e+03, sigma = 1.1809e+00, mean_x =    0.4084    0.4882    0.9343    0.0619    0.3858 
+CMA-ES gen  60: fbest = 1.951463e+03, sigma = 1.2518e+00, mean_x =    0.1690    0.5287    1.5102   -0.2064    0.3422 
+CMA-ES gen  70: fbest = 1.678181e+03, sigma = 1.3134e+00, mean_x =    0.1515    0.4930    2.0542   -0.4193    0.2805 
+CMA-ES gen  80: fbest = 1.492645e+03, sigma = 2.1187e+00, mean_x =    0.1552    0.4990    2.4801   -0.3421    0.2180 
+CMA-ES gen  90: fbest = 1.013678e+03, sigma = 4.9714e+00, mean_x =    0.1233    0.5331    3.4008    0.0337    0.0844 
+CMA-ES gen 100: fbest = 9.858742e+02, sigma = 4.0940e+00, mean_x =    0.1016    0.5031    3.7939    0.1275    0.0650 
+CMA-ES gen 110: fbest = 8.738643e+02, sigma = 8.9010e+00, mean_x =    0.0671    0.4657    5.3647    0.1372    0.0418 
+CMA-ES gen 120: fbest = 8.123184e+02, sigma = 5.7874e+00, mean_x =    0.0569    0.4942    6.4633    0.3192    0.0468 
+CMA-ES gen 130: fbest = 7.808782e+02, sigma = 3.3126e+00, mean_x =    0.0495    0.5186    7.5173    0.4118    0.0471 
+CMA-ES gen 140: fbest = 7.448966e+02, sigma = 8.4128e+00, mean_x =    0.0398    0.5240    9.3117    0.4478    0.0558 
+CMA-ES gen 150: fbest = 7.213531e+02, sigma = 1.2269e+01, mean_x =    0.0326    0.5559   11.7336    0.2952    0.0564 
+CMA-ES gen 160: fbest = 7.084566e+02, sigma = 9.5032e+00, mean_x =    0.0290    0.5487   12.9500    0.2669    0.0496 
+CMA-ES gen 170: fbest = 7.015387e+02, sigma = 8.8097e+00, mean_x =    0.0280    0.5375   13.4081    0.3643    0.0468 
+CMA-ES gen 180: fbest = 7.015387e+02, sigma = 3.6345e+00, mean_x =    0.0274    0.5331   13.5776    0.3557    0.0469 
+CMA-ES gen 190: fbest = 7.013229e+02, sigma = 2.9359e+00, mean_x =    0.0273    0.5345   13.6265    0.3851    0.0489 
+CMA-ES gen 200: fbest = 7.012762e+02, sigma = 1.8760e+00, mean_x =    0.0273    0.5350   13.6248    0.3834    0.0482 
+CMA-ES stop: TolFun (eff = 7.0127e-02) reached at gen 204
+Restart 3: chi2 = 701.271346, par = [0.0273 0.5354 13.6357 0.3735 0.0484]
+
+--- Stage 1 restart 4 ---
+Initial mean: [ 48.6707 0.6009 0.5875 -0.1296 0.2581]
+CMA-ES: d=5, lambda=20, mu=10, mu_eff=5.94
+CMA-ES gen   1: fbest = 2.386660e+04, sigma = 3.9290e+00, mean_x =   40.4549    0.9230    0.0703   -0.2925    0.3012 
+CMA-ES gen  10: fbest = 2.009583e+04, sigma = 1.6951e+00, mean_x =   31.8917    0.4456    0.0365   -0.1521    0.3776 
+CMA-ES gen  20: fbest = 1.717168e+04, sigma = 8.3018e-01, mean_x =   29.5209    0.4105    0.2872   -0.1168    0.3393 
+CMA-ES gen  30: fbest = 1.697678e+04, sigma = 4.5220e-01, mean_x =   26.8020    0.4053    0.3041   -0.1499    0.3069 
+CMA-ES gen  40: fbest = 1.551971e+04, sigma = 1.4479e+00, mean_x =   10.3908    0.4316    0.2917   -0.2854    0.2663 
+CMA-ES gen  50: fbest = 6.552433e+03, sigma = 1.1545e+00, mean_x =    2.2430    0.3978    0.3189   -0.3778    0.2166 
+CMA-ES gen  60: fbest = 5.300575e+03, sigma = 8.7243e-01, mean_x =    0.4368    0.4145    0.3953   -0.2924    0.2025 
+CMA-ES gen  70: fbest = 4.691645e+03, sigma = 7.7138e-01, mean_x =    0.5218    0.4252    0.4271   -0.2368    0.2155 
+CMA-ES gen  80: fbest = 3.046148e+03, sigma = 3.0480e+00, mean_x =    0.3983    0.4700    0.8482   -0.0729    0.2141 
+CMA-ES gen  90: fbest = 2.073649e+03, sigma = 5.0853e+00, mean_x =    0.3919    0.3417    0.9559    0.3430    0.2008 
+CMA-ES gen 100: fbest = 1.842034e+03, sigma = 3.4879e+00, mean_x =    0.2898    0.4988    1.5260    0.3850    0.1127 
+CMA-ES gen 110: fbest = 1.608885e+03, sigma = 3.3210e+00, mean_x =    0.2367    0.5231    1.8371    0.4396    0.1224 
+CMA-ES gen 120: fbest = 1.224788e+03, sigma = 7.4645e+00, mean_x =    0.1794    0.5033    2.2863    0.3178    0.0817 
+CMA-ES gen 130: fbest = 1.081545e+03, sigma = 5.0969e+00, mean_x =    0.1478    0.5052    2.8671    0.4054    0.0843 
+CMA-ES gen 140: fbest = 9.668161e+02, sigma = 9.1810e+00, mean_x =    0.1054    0.5132    3.8037    0.1973    0.0666 
+CMA-ES gen 150: fbest = 8.997484e+02, sigma = 1.1987e+01, mean_x =    0.0772    0.5173    4.9676    0.2497    0.0420 
+CMA-ES gen 160: fbest = 7.850264e+02, sigma = 1.7923e+01, mean_x =    0.0580    0.5602    6.8681    0.2158    0.0543 
+CMA-ES gen 170: fbest = 7.850264e+02, sigma = 1.0307e+01, mean_x =    0.0511    0.5322    7.5472    0.1448    0.0535 
+CMA-ES gen 180: fbest = 7.382732e+02, sigma = 2.0868e+01, mean_x =    0.0399    0.5155    9.2511    0.2461    0.0355 
+CMA-ES gen 190: fbest = 7.166530e+02, sigma = 2.9684e+01, mean_x =    0.0322    0.5250   11.4756    0.3137    0.0456 
+CMA-ES gen 200: fbest = 7.017354e+02, sigma = 2.2971e+01, mean_x =    0.0279    0.5370   13.3471    0.3033    0.0498 
+CMA-ES gen 210: fbest = 7.015729e+02, sigma = 9.9894e+00, mean_x =    0.0275    0.5309   13.4855    0.3579    0.0455 
+CMA-ES gen 220: fbest = 7.012956e+02, sigma = 4.6121e+00, mean_x =    0.0273    0.5323   13.6081    0.3796    0.0468 
+CMA-ES gen 230: fbest = 7.012843e+02, sigma = 3.7409e+00, mean_x =    0.0273    0.5348   13.6173    0.3808    0.0485 
+CMA-ES stop: TolFun (eff = 7.0127e-02) reached at gen 239
+Restart 4: chi2 = 701.271100, par = [0.0272 0.5346 13.6226 0.3837 0.0485]
+
+--- Stage 1 restart 5 ---
+Initial mean: [ 10.6942 4.1621 15.9133 -0.2516 0.3843]
+CMA-ES: d=5, lambda=20, mu=10, mu_eff=5.94
+CMA-ES gen   1: fbest = 5.357073e+05, sigma = 3.6135e+00, mean_x =   11.3865    3.9605   13.7552   -0.1580    0.4352 
+CMA-ES gen  10: fbest = 2.104414e+04, sigma = 4.8868e+00, mean_x =    4.7444    1.1360    0.2647   -0.1746    0.2680 
+CMA-ES gen  20: fbest = 1.636208e+04, sigma = 3.8824e+00, mean_x =   20.4044    0.7761    0.1808   -0.0202    0.3133 
+CMA-ES gen  30: fbest = 1.636208e+04, sigma = 1.8270e+00, mean_x =   22.7480    0.2961    0.1261    0.2315    0.2536 
+CMA-ES gen  40: fbest = 1.619802e+04, sigma = 1.1387e+00, mean_x =   18.3634    0.3638    0.3110    0.1437    0.2709 
+CMA-ES gen  50: fbest = 5.145224e+03, sigma = 2.0415e+00, mean_x =    3.3662    0.3217    0.3946    0.0069    0.2208 
+CMA-ES gen  60: fbest = 4.278238e+03, sigma = 1.5032e+00, mean_x =    0.9785    0.4638    0.5126   -0.1320    0.2556 
+CMA-ES gen  70: fbest = 3.524546e+03, sigma = 2.1007e+00, mean_x =    0.4839    0.4493    0.6568   -0.0401    0.2323 
+CMA-ES gen  80: fbest = 3.250591e+03, sigma = 1.3767e+00, mean_x =    0.4428    0.3732    0.7010    0.1022    0.2065 
+CMA-ES gen  90: fbest = 2.484380e+03, sigma = 1.8180e+00, mean_x =    0.3140    0.4037    1.0179    0.1956    0.1827 
+CMA-ES gen 100: fbest = 1.674131e+03, sigma = 2.7402e+00, mean_x =    0.2405    0.3883    1.5886    0.3392    0.1060 
+CMA-ES gen 110: fbest = 1.352556e+03, sigma = 3.8632e+00, mean_x =    0.2153    0.4483    1.9203    0.3821    0.0904 
+CMA-ES gen 120: fbest = 1.287869e+03, sigma = 3.9216e+00, mean_x =    0.1502    0.5398    2.7429    0.4581    0.0459 
+CMA-ES gen 130: fbest = 1.133195e+03, sigma = 1.0152e+01, mean_x =    0.1459    0.5634    2.8376    0.0494    0.0917 
+CMA-ES gen 140: fbest = 9.546297e+02, sigma = 1.0514e+01, mean_x =    0.0982    0.4955    3.8794    0.3137    0.0735 
+CMA-ES gen 150: fbest = 9.022590e+02, sigma = 1.0876e+01, mean_x =    0.0845    0.5126    4.6324    0.3333    0.0445 
+CMA-ES gen 160: fbest = 8.433145e+02, sigma = 2.1227e+01, mean_x =    0.0694    0.5445    5.7894    0.3638    0.0605 
+CMA-ES gen 170: fbest = 7.855472e+02, sigma = 2.2961e+01, mean_x =    0.0504    0.5612    7.8565    0.3241    0.0630 
+CMA-ES gen 180: fbest = 7.596225e+02, sigma = 1.7560e+01, mean_x =    0.0435    0.5407    8.6578    0.3268    0.0534 
+CMA-ES gen 190: fbest = 7.346248e+02, sigma = 2.7355e+01, mean_x =    0.0343    0.5238   10.7831    0.1879    0.0363 
+CMA-ES gen 200: fbest = 7.109896e+02, sigma = 2.8909e+01, mean_x =    0.0304    0.5542   12.5079    0.2477    0.0438 
+CMA-ES gen 210: fbest = 7.018811e+02, sigma = 1.5235e+01, mean_x =    0.0276    0.5325   13.3880    0.3814    0.0432 
+CMA-ES gen 220: fbest = 7.015429e+02, sigma = 7.9010e+00, mean_x =    0.0274    0.5378   13.5960    0.3958    0.0461 
+CMA-ES gen 230: fbest = 7.013006e+02, sigma = 7.7634e+00, mean_x =    0.0273    0.5341   13.5951    0.3683    0.0466 
+CMA-ES gen 240: fbest = 7.013006e+02, sigma = 3.0429e+00, mean_x =    0.0273    0.5351   13.6374    0.3759    0.0471 
+CMA-ES stop: TolFun (eff = 7.0130e-02) reached at gen 240
+Restart 5: chi2 = 701.300560, par = [0.0273 0.5354 13.6372 0.3736 0.0470]
+
+--- Stage 1 restart 6 ---
+Initial mean: [ 18.7807 0.0692 3.0650 0.6209 0.4401]
+CMA-ES: d=5, lambda=20, mu=10, mu_eff=5.94
+CMA-ES gen   1: fbest = 2.297094e+04, sigma = 3.8625e+00, mean_x =   12.7612    0.6016    0.6871    0.4673    0.4493 
+CMA-ES gen  10: fbest = 1.972029e+04, sigma = 1.9952e+00, mean_x =   14.9604    0.7933    0.0908   -0.2585    0.3313 
+CMA-ES gen  20: fbest = 1.684125e+04, sigma = 8.2111e-01, mean_x =   21.5949    0.4750    0.3117    0.0948    0.3158 
+CMA-ES gen  30: fbest = 1.684125e+04, sigma = 4.2227e-01, mean_x =   23.1747    0.4152    0.3128    0.0790    0.3053 
+CMA-ES gen  40: fbest = 7.196582e+03, sigma = 2.5656e+00, mean_x =    4.6833    0.4701    0.3829   -0.3086    0.3378 
+CMA-ES gen  50: fbest = 5.430901e+03, sigma = 1.1952e+00, mean_x =    1.8140    0.4601    0.4139   -0.3024    0.3448 
+CMA-ES gen  60: fbest = 5.430901e+03, sigma = 6.5539e-01, mean_x =    0.3484    0.4361    0.4218   -0.2833    0.3569 
+CMA-ES gen  70: fbest = 4.684481e+03, sigma = 9.5269e-01, mean_x =    0.3971    0.3979    0.4600   -0.3053    0.3480 
+CMA-ES gen  80: fbest = 3.498243e+03, sigma = 2.7382e+00, mean_x =    0.2768    0.3760    0.6763   -0.1607    0.3469 
+CMA-ES gen  90: fbest = 1.905923e+03, sigma = 4.5125e+00, mean_x =    0.2173    0.4261    1.2162   -0.0730    0.3586 
+CMA-ES gen 100: fbest = 1.777188e+03, sigma = 3.3557e+00, mean_x =    0.1784    0.4480    1.5795    0.0277    0.3677 
+CMA-ES gen 110: fbest = 1.464541e+03, sigma = 4.2048e+00, mean_x =    0.1187    0.5437    2.3392   -0.0798    0.3938 
+CMA-ES gen 120: fbest = 1.300351e+03, sigma = 4.2043e+00, mean_x =    0.0776    0.5815    3.3530    0.0359    0.4195 
+CMA-ES gen 130: fbest = 1.240077e+03, sigma = 4.4781e+00, mean_x =    0.0654    0.5626    3.8657    0.0202    0.4192 
+CMA-ES gen 140: fbest = 1.174443e+03, sigma = 6.1248e+00, mean_x =    0.0488    0.6326    5.0538   -0.0020    0.4478 
+CMA-ES gen 150: fbest = 1.140448e+03, sigma = 8.6662e+00, mean_x =    0.0456    0.6062    5.5368   -0.0781    0.4272 
+CMA-ES gen 160: fbest = 1.134944e+03, sigma = 1.0946e+01, mean_x =    0.0358    0.6543    6.9931   -0.0037    0.4448 
+CMA-ES gen 170: fbest = 1.113831e+03, sigma = 7.8099e+00, mean_x =    0.0296    0.6825    8.3148   -0.0498    0.4463 
+CMA-ES gen 180: fbest = 1.103456e+03, sigma = 9.5525e+00, mean_x =    0.0257    0.6933    9.5986   -0.0649    0.4364 
+CMA-ES gen 190: fbest = 1.096830e+03, sigma = 1.3555e+01, mean_x =    0.0235    0.6904   10.6970   -0.0473    0.4228 
+CMA-ES gen 200: fbest = 1.093315e+03, sigma = 1.0229e+01, mean_x =    0.0228    0.7110   11.2049   -0.0195    0.4250 
+CMA-ES gen 210: fbest = 1.092574e+03, sigma = 6.4151e+00, mean_x =    0.0231    0.7134   11.4421   -0.0104    0.4078 
+CMA-ES gen 220: fbest = 7.865362e+02, sigma = 1.1610e+02, mean_x =    0.0300    0.6011   13.6228    0.0111    0.0892 
+CMA-ES gen 230: fbest = 7.541713e+02, sigma = 8.0901e+01, mean_x =    0.0309    0.6327   13.5304    0.1051    0.0760 
+CMA-ES gen 240: fbest = 7.093011e+02, sigma = 1.1882e+02, mean_x =    0.0299    0.5588   12.7851    0.2691    0.0576 
+CMA-ES gen 250: fbest = 7.026645e+02, sigma = 5.2672e+01, mean_x =    0.0277    0.5341   13.4327    0.3540    0.0486 
+CMA-ES gen 260: fbest = 7.014864e+02, sigma = 2.3347e+01, mean_x =    0.0273    0.5298   13.5538    0.3812    0.0473 
+CMA-ES gen 270: fbest = 7.012739e+02, sigma = 1.0936e+01, mean_x =    0.0273    0.5352   13.6277    0.3739    0.0480 
+CMA-ES stop: TolFun (eff = 7.0127e-02) reached at gen 276
+Restart 6: chi2 = 701.270062, par = [0.0273 0.5334 13.6231 0.3773 0.0482]
+
+--- Stage 1 restart 7 ---
+Initial mean: [ 36.6509 2.8784 11.0364 0.4397 0.4899]
+CMA-ES: d=5, lambda=20, mu=10, mu_eff=5.94
+CMA-ES gen   1: fbest = 3.775694e+04, sigma = 4.7211e+00, mean_x =   35.3509    2.0267    3.7505    0.5508    0.4467 
+CMA-ES gen  10: fbest = 1.257422e+04, sigma = 4.3310e+00, mean_x =    6.5993    0.6124    0.0306   -0.2217    0.1267 
+CMA-ES gen  20: fbest = 8.838639e+03, sigma = 1.7919e+00, mean_x =   13.3186    0.4048    0.1707    0.3618    0.1190 
+CMA-ES gen  30: fbest = 3.922567e+03, sigma = 1.2560e+00, mean_x =    1.4674    0.3743    0.5404    0.1987    0.1268 
+CMA-ES gen  40: fbest = 3.058554e+03, sigma = 8.9692e-01, mean_x =    0.9595    0.4283    0.5617    0.0613    0.1349 
+CMA-ES gen  50: fbest = 2.949782e+03, sigma = 1.5860e+00, mean_x =    0.6336    0.4024    0.6917   -0.1557    0.1588 
+CMA-ES gen  60: fbest = 2.505205e+03, sigma = 1.1474e+00, mean_x =    0.4065    0.4809    0.9904   -0.0688    0.1698 
+CMA-ES gen  70: fbest = 2.080474e+03, sigma = 1.4333e+00, mean_x =    0.3619    0.4434    1.1925   -0.0711    0.1823 
+CMA-ES gen  80: fbest = 1.799140e+03, sigma = 1.5349e+00, mean_x =    0.2751    0.4426    1.4339   -0.1068    0.1654 
+CMA-ES gen  90: fbest = 1.451727e+03, sigma = 3.2163e+00, mean_x =    0.1888    0.4772    2.1529   -0.0285    0.1788 
+CMA-ES gen 100: fbest = 1.078519e+03, sigma = 4.9710e+00, mean_x =    0.1262    0.4518    2.8951    0.3112    0.1196 
+CMA-ES gen 110: fbest = 1.004811e+03, sigma = 3.3974e+00, mean_x =    0.1136    0.4859    3.4322    0.2091    0.0722 
+CMA-ES gen 120: fbest = 8.893417e+02, sigma = 5.4369e+00, mean_x =    0.0834    0.5066    4.6293    0.3046    0.0526 
+CMA-ES gen 130: fbest = 8.318848e+02, sigma = 6.2536e+00, mean_x =    0.0628    0.5750    6.3809   -0.0226    0.0559 
+CMA-ES gen 140: fbest = 7.852043e+02, sigma = 6.0685e+00, mean_x =    0.0533    0.5309    7.2169    0.2527    0.0485 
+CMA-ES gen 150: fbest = 7.544499e+02, sigma = 1.1146e+01, mean_x =    0.0432    0.5482    8.9130    0.2959    0.0520 
+CMA-ES gen 160: fbest = 7.195790e+02, sigma = 1.1673e+01, mean_x =    0.0327    0.5125   11.1830    0.3133    0.0437 
+CMA-ES gen 170: fbest = 7.037787e+02, sigma = 8.1305e+00, mean_x =    0.0285    0.5362   13.0614    0.3503    0.0466 
+CMA-ES gen 180: fbest = 7.014508e+02, sigma = 3.5439e+00, mean_x =    0.0274    0.5357   13.5622    0.3751    0.0492 
+CMA-ES gen 190: fbest = 7.013360e+02, sigma = 2.2222e+00, mean_x =    0.0274    0.5376   13.6266    0.3824    0.0486 
+CMA-ES gen 200: fbest = 7.013254e+02, sigma = 1.0078e+00, mean_x =    0.0273    0.5360   13.6330    0.3753    0.0481 
+CMA-ES stop: TolFun (eff = 7.0127e-02) reached at gen 209
+Restart 7: chi2 = 701.266770, par = [0.0273 0.5350 13.6330 0.3799 0.0481]
+
+--- Stage 1 restart 8 ---
+Initial mean: [ 0.7647 2.2422 20.8719 0.8518 0.1952]
+CMA-ES: d=5, lambda=20, mu=10, mu_eff=5.94
+CMA-ES gen   1: fbest = 5.595388e+05, sigma = 4.6281e+00, mean_x =    4.5623    2.8921   16.9614    0.5071    0.2878 
+CMA-ES gen  10: fbest = 1.982416e+04, sigma = 6.5092e+00, mean_x =   44.0315    1.1655    0.0623   -0.4584    0.3458 
+CMA-ES gen  20: fbest = 1.425811e+04, sigma = 3.0967e+00, mean_x =   35.8636    0.4095    0.0921   -0.6861    0.4250 
+CMA-ES gen  30: fbest = 1.425811e+04, sigma = 1.0762e+00, mean_x =   34.9221    0.3844    0.1290   -0.8602    0.4294 
+CMA-ES gen  40: fbest = 1.425811e+04, sigma = 8.5594e-01, mean_x =   32.9742    0.3834    0.2289   -0.8375    0.4199 
+CMA-ES gen  50: fbest = 1.425811e+04, sigma = 2.5253e+00, mean_x =   20.5411    0.4143    0.3179   -0.2630    0.3614 
+CMA-ES gen  60: fbest = 5.318769e+03, sigma = 4.2467e+00, mean_x =    7.9104    0.4211    0.4125    0.1285    0.2846 
+CMA-ES gen  70: fbest = 4.038867e+03, sigma = 2.4285e+00, mean_x =    1.3604    0.4176    0.4998    0.2985    0.2742 
+CMA-ES gen  80: fbest = 4.038867e+03, sigma = 3.0966e+00, mean_x =    0.5037    0.4049    0.5166   -0.0723    0.3215 
+CMA-ES gen  90: fbest = 4.038867e+03, sigma = 3.0443e+00, mean_x =    0.4045    0.3992    0.5917    0.2873    0.2539 
+CMA-ES gen 100: fbest = 3.262784e+03, sigma = 3.4031e+00, mean_x =    0.3166    0.3611    0.7147   -0.0598    0.2856 
+CMA-ES gen 110: fbest = 2.764503e+03, sigma = 6.0331e+00, mean_x =    0.3078    0.3307    0.9179    0.2514    0.2086 
+CMA-ES gen 120: fbest = 2.178777e+03, sigma = 7.6577e+00, mean_x =    0.2330    0.3247    1.2723    0.3150    0.1682 
+CMA-ES gen 130: fbest = 1.656351e+03, sigma = 1.2297e+01, mean_x =    0.2144    0.3901    1.6103    0.3711    0.1164 
+CMA-ES gen 140: fbest = 1.319909e+03, sigma = 1.6974e+01, mean_x =    0.1698    0.4590    2.1927    0.1137    0.0818 
+CMA-ES gen 150: fbest = 1.033286e+03, sigma = 4.6942e+01, mean_x =    0.1134    0.4820    3.4221    0.3964    0.0612 
+CMA-ES gen 160: fbest = 9.834653e+02, sigma = 2.1114e+01, mean_x =    0.1018    0.4760    3.7296    0.2934    0.0594 
+CMA-ES gen 170: fbest = 9.034118e+02, sigma = 3.0561e+01, mean_x =    0.0841    0.5140    4.6090    0.3090    0.0706 
+CMA-ES gen 180: fbest = 8.440867e+02, sigma = 2.8313e+01, mean_x =    0.0683    0.5579    5.8229    0.2395    0.0603 
+CMA-ES gen 190: fbest = 7.945859e+02, sigma = 7.7369e+01, mean_x =    0.0471    0.5398    7.9390    0.1596    0.0224 
+CMA-ES gen 200: fbest = 7.645754e+02, sigma = 6.1390e+01, mean_x =    0.0428    0.4916    8.4580    0.4142    0.0494 
+CMA-ES gen 210: fbest = 7.385671e+02, sigma = 4.7865e+01, mean_x =    0.0389    0.5209    9.5718    0.3180    0.0487 
+CMA-ES gen 220: fbest = 7.191256e+02, sigma = 8.9959e+01, mean_x =    0.0323    0.5273   11.4905    0.3471    0.0492 
+CMA-ES gen 230: fbest = 7.043585e+02, sigma = 9.1204e+01, mean_x =    0.0279    0.5333   13.1874    0.3565    0.0429 
+CMA-ES gen 240: fbest = 7.016522e+02, sigma = 3.6717e+01, mean_x =    0.0276    0.5384   13.5363    0.3607    0.0432 
+CMA-ES gen 250: fbest = 7.013755e+02, sigma = 1.8750e+01, mean_x =    0.0272    0.5322   13.6081    0.3628    0.0454 
+CMA-ES gen 260: fbest = 7.012749e+02, sigma = 1.8870e+01, mean_x =    0.0273    0.5340   13.6237    0.3706    0.0477 
+CMA-ES stop: TolFun (eff = 7.0127e-02) reached at gen 266
+Restart 8: chi2 = 701.274841, par = [0.0273 0.5350 13.6306 0.3759 0.0479]
+
+--- Stage 1 restart 9 ---
+Initial mean: [ 20.2856 3.2323 18.3039 -0.7815 0.2302]
+CMA-ES: d=5, lambda=20, mu=10, mu_eff=5.94
+CMA-ES gen   1: fbest = 6.534412e+05, sigma = 4.2537e+00, mean_x =   21.8261    3.0152   14.2113   -0.4374    0.2915 
+CMA-ES gen  10: fbest = 2.089033e+04, sigma = 6.0675e+00, mean_x =   36.3209    1.4797    0.2749    0.5299    0.2067 
+CMA-ES gen  20: fbest = 1.770535e+04, sigma = 3.2311e+00, mean_x =   35.3169    0.5208    0.2088    0.3245    0.2762 
+CMA-ES gen  30: fbest = 1.706537e+04, sigma = 1.4680e+00, mean_x =   33.3750    0.3721    0.2992    0.4176    0.3131 
+CMA-ES gen  40: fbest = 1.706537e+04, sigma = 7.1395e-01, mean_x =   33.9347    0.3918    0.2954    0.2024    0.3364 
+CMA-ES gen  50: fbest = 1.706537e+04, sigma = 3.3810e-01, mean_x =   33.3655    0.3914    0.2975    0.1689    0.3490 
+CMA-ES gen  60: fbest = 1.706537e+04, sigma = 1.7589e-01, mean_x =   33.5161    0.3896    0.3025    0.1527    0.3459 
+CMA-ES gen  70: fbest = 1.706517e+04, sigma = 2.7158e-01, mean_x =   33.2978    0.3866    0.2999    0.1137    0.3523 
+CMA-ES gen  80: fbest = 1.706272e+04, sigma = 3.9406e-01, mean_x =   32.9680    0.3852    0.2992    0.0330    0.3551 
+CMA-ES gen  90: fbest = 1.705752e+04, sigma = 1.3576e-01, mean_x =   33.1579    0.3876    0.3037    0.0526    0.3510 
+CMA-ES gen 100: fbest = 1.705752e+04, sigma = 8.1872e-02, mean_x =   33.1204    0.3879    0.3041    0.0575    0.3518 
+CMA-ES gen 110: fbest = 1.705748e+04, sigma = 6.8926e-02, mean_x =   33.1200    0.3872    0.3035    0.0559    0.3526 
+CMA-ES gen 120: fbest = 1.705509e+04, sigma = 3.4334e-02, mean_x =   33.1039    0.3871    0.3035    0.0510    0.3526 
+CMA-ES gen 130: fbest = 1.705455e+04, sigma = 2.2943e-02, mean_x =   33.0916    0.3869    0.3035    0.0506    0.3528 
+CMA-ES stop: TolFun (eff = 1.7055e+00) reached at gen 138
+Restart 9: chi2 = 17054.552192, par = [33.1064 0.3870 0.3035 0.0527 0.3526]
+
+--- Stage 1 restart 10 ---
+Initial mean: [ 6.2595 4.0001 8.8666 0.0801 0.3482]
+CMA-ES: d=5, lambda=20, mu=10, mu_eff=5.94
+CMA-ES gen   1: fbest = 1.400252e+05, sigma = 4.0824e+00, mean_x =    9.6018    3.9075    3.8769   -0.1552    0.3665 
+CMA-ES gen  10: fbest = 1.960622e+04, sigma = 3.6954e+00, mean_x =   16.2799    0.4386    0.0221   -0.8178    0.1293 
+CMA-ES gen  20: fbest = 1.911691e+04, sigma = 1.9280e+00, mean_x =   31.7522    0.3764    0.0379   -0.6907    0.0725 
+CMA-ES gen  30: fbest = 1.787637e+04, sigma = 1.7521e+00, mean_x =   32.7347    0.3513    0.0397   -0.8173    0.0852 
+CMA-ES gen  40: fbest = 1.292374e+04, sigma = 2.4783e+00, mean_x =    8.0743    0.2795    0.2082   -0.5703    0.0752 
+CMA-ES gen  50: fbest = 5.504353e+03, sigma = 2.0258e+00, mean_x =    2.2782    0.3218    0.3832   -0.4102    0.0783 
+CMA-ES gen  60: fbest = 4.028093e+03, sigma = 1.4930e+00, mean_x =    0.5838    0.3451    0.5421   -0.3177    0.1111 
+CMA-ES gen  70: fbest = 3.122784e+03, sigma = 2.2206e+00, mean_x =    0.4680    0.4000    0.6498   -0.2515    0.1552 
+CMA-ES gen  80: fbest = 3.122784e+03, sigma = 1.7051e+00, mean_x =    0.4022    0.3330    0.7883   -0.1874    0.1775 
+CMA-ES gen  90: fbest = 2.395494e+03, sigma = 2.2519e+00, mean_x =    0.3256    0.3821    1.0442   -0.0342    0.2241 
+CMA-ES gen 100: fbest = 2.023066e+03, sigma = 3.5942e+00, mean_x =    0.2247    0.4849    1.3050    0.0136    0.3218 
+CMA-ES gen 110: fbest = 1.690286e+03, sigma = 4.4585e+00, mean_x =    0.1455    0.5015    1.8095    0.2443    0.4201 
+CMA-ES gen 120: fbest = 1.361327e+03, sigma = 1.8006e+01, mean_x =    0.0865    0.5537    2.6492   -0.2055    0.4474 
+CMA-ES gen 130: fbest = 1.361327e+03, sigma = 1.4778e+01, mean_x =    0.1549    0.5437    2.4946   -0.1425    0.2227 
+CMA-ES gen 140: fbest = 1.155035e+03, sigma = 1.7947e+01, mean_x =    0.1231    0.5011    3.1577    0.0366    0.1572 
+CMA-ES gen 150: fbest = 9.480730e+02, sigma = 1.7164e+01, mean_x =    0.0955    0.4748    3.8937    0.2801    0.0900 
+CMA-ES gen 160: fbest = 8.950554e+02, sigma = 1.4229e+01, mean_x =    0.0819    0.5086    4.7092    0.3315    0.0615 
+CMA-ES gen 170: fbest = 8.082392e+02, sigma = 2.9823e+01, mean_x =    0.0596    0.5543    6.5697    0.2505    0.0601 
+CMA-ES gen 180: fbest = 7.530351e+02, sigma = 3.1029e+01, mean_x =    0.0474    0.5284    8.0711    0.4108    0.0478 
+CMA-ES gen 190: fbest = 7.352371e+02, sigma = 3.1251e+01, mean_x =    0.0377    0.5175    9.7652    0.4452    0.0413 
+CMA-ES gen 200: fbest = 7.158169e+02, sigma = 4.5924e+01, mean_x =    0.0324    0.5475   11.6612    0.3548    0.0574 
+CMA-ES gen 210: fbest = 7.067543e+02, sigma = 4.3298e+01, mean_x =    0.0294    0.5519   12.8363    0.3310    0.0449 
+CMA-ES gen 220: fbest = 7.020669e+02, sigma = 1.9669e+01, mean_x =    0.0274    0.5288   13.4695    0.3921    0.0496 
+CMA-ES gen 230: fbest = 7.014083e+02, sigma = 1.0513e+01, mean_x =    0.0273    0.5333   13.5922    0.3964    0.0488 
+CMA-ES gen 240: fbest = 7.012877e+02, sigma = 1.0990e+01, mean_x =    0.0273    0.5375   13.6343    0.3849    0.0485 
+CMA-ES gen 250: fbest = 7.012859e+02, sigma = 6.6675e+00, mean_x =    0.0273    0.5342   13.6187    0.3804    0.0482 
+CMA-ES stop: TolFun (eff = 7.0128e-02) reached at gen 252
+Restart 10: chi2 = 701.275020, par = [0.0272 0.5346 13.6233 0.3799 0.0484]
+
+--- RELAUNCH restart 1 (chi2 17149 > 5.0x best 701.2668) ---
+Antithetic x0: [ 16.9366 3.8633 11.9799 0.5055 0.3877]
+
+--- Stage 1 restart 1 ---
+Initial mean: [ 16.9366 3.8633 11.9799 0.5055 0.3877]
+CMA-ES: d=5, lambda=20, mu=10, mu_eff=5.94
+CMA-ES gen   1: fbest = 2.477315e+05, sigma = 4.2078e+00, mean_x =   16.4396    3.2197    6.4185    0.6548    0.3875 
+CMA-ES gen  10: fbest = 2.010936e+04, sigma = 2.7842e+00, mean_x =   18.7816    0.5777    0.1709    0.5288    0.4276 
+CMA-ES gen  20: fbest = 1.355876e+03, sigma = 1.5859e+00, mean_x =    5.8450    0.4834    0.4575    0.0023    0.4405 
+CMA-ES gen  30: fbest = 1.355876e+03, sigma = 8.7433e-01, mean_x =    2.0296    0.4539    0.5363   -0.0217    0.4384 
+CMA-ES gen  40: fbest = 1.355876e+03, sigma = 4.9095e-01, mean_x =    0.3425    0.4280    0.6342   -0.0457    0.4405 
+CMA-ES gen  50: fbest = 1.355876e+03, sigma = 1.0983e+00, mean_x =    0.4548    0.4275    1.0064   -0.1768    0.4074 
+CMA-ES gen  60: fbest = 1.355876e+03, sigma = 6.4437e-01, mean_x =    0.1621    0.3916    1.3074   -0.2279    0.4020 
+CMA-ES gen  70: fbest = 1.355876e+03, sigma = 9.5207e-01, mean_x =    0.1675    0.5252    1.7873   -0.1063    0.3921 
+CMA-ES gen  80: fbest = 1.355876e+03, sigma = 1.0598e+00, mean_x =    0.1378    0.5136    2.0664   -0.1253    0.3917 
+CMA-ES gen  90: fbest = 1.325639e+03, sigma = 1.9204e+00, mean_x =    0.0879    0.5698    2.9705   -0.0216    0.4101 
+CMA-ES gen 100: fbest = 1.228952e+03, sigma = 1.6265e+00, mean_x =    0.0696    0.5781    3.7462   -0.0306    0.4058 
+CMA-ES gen 110: fbest = 1.187585e+03, sigma = 1.6087e+00, mean_x =    0.0546    0.6158    4.7574    0.0494    0.4171 
+CMA-ES gen 120: fbest = 1.153613e+03, sigma = 1.4963e+00, mean_x =    0.0462    0.6464    5.7073    0.0501    0.4172 
+CMA-ES gen 130: fbest = 1.126616e+03, sigma = 4.5402e+00, mean_x =    0.0371    0.7419    7.4795   -0.0279    0.4026 
+CMA-ES gen 140: fbest = 1.118499e+03, sigma = 2.8749e+00, mean_x =    0.0329    0.7047    8.0865   -0.0875    0.4145 
+CMA-ES gen 150: fbest = 1.105538e+03, sigma = 6.2766e+00, mean_x =    0.0269    0.6979    9.2745   -0.0035    0.4430 
+CMA-ES gen 160: fbest = 1.099678e+03, sigma = 3.5116e+00, mean_x =    0.0246    0.7034   10.0932   -0.0369    0.4400 
+CMA-ES gen 170: fbest = 1.095214e+03, sigma = 3.0236e+00, mean_x =    0.0228    0.7114   10.8129   -0.0375    0.4476 
+CMA-ES gen 180: fbest = 1.094398e+03, sigma = 1.6768e+00, mean_x =    0.0224    0.7233   11.1142   -0.0523    0.4459 
+CMA-ES gen 190: fbest = 1.094331e+03, sigma = 8.8391e-01, mean_x =    0.0223    0.7219   11.1434   -0.0561    0.4448 
+CMA-ES stop: TolFun (eff = 1.0943e-01) reached at gen 190
+Restart 1: chi2 = 1094.331112, par = [0.0223 0.7199 11.1340 -0.0543 0.4452]
+Relaunch IMPROVED restart 1: chi2 17149.1313 -> 1094.3311
+
+--- RELAUNCH restart 9 (chi2 17055 > 5.0x best 701.2668) ---
+Antithetic x0: [ 29.7154 1.7777 6.7061 0.7815 0.2798]
+
+--- Stage 1 restart 9 ---
+Initial mean: [ 29.7154 1.7777 6.7061 0.7815 0.2798]
+CMA-ES: d=5, lambda=20, mu=10, mu_eff=5.94
+CMA-ES gen   1: fbest = 5.455219e+04, sigma = 4.1497e+00, mean_x =   25.0907    1.8508    1.2243    0.5888    0.2749 
+CMA-ES gen  10: fbest = 1.712650e+04, sigma = 2.7976e+00, mean_x =   17.4777    0.6170    0.1530   -0.4535    0.1542 
+CMA-ES gen  20: fbest = 1.603524e+04, sigma = 1.3379e+00, mean_x =   12.3004    0.3396    0.2420   -0.4202    0.1411 
+CMA-ES gen  30: fbest = 3.871453e+03, sigma = 1.0199e+00, mean_x =    0.9919    0.4379    0.5544   -0.3824    0.1632 
+CMA-ES gen  40: fbest = 3.263780e+03, sigma = 6.4734e-01, mean_x =    0.4497    0.4565    0.7214   -0.2878    0.1774 
+CMA-ES gen  50: fbest = 2.483937e+03, sigma = 8.1063e-01, mean_x =    0.3002    0.4041    1.0231   -0.2230    0.2156 
+CMA-ES gen  60: fbest = 2.007183e+03, sigma = 1.0639e+00, mean_x =    0.2668    0.4276    1.3572   -0.0326    0.1882 
+CMA-ES gen  70: fbest = 1.576778e+03, sigma = 1.2098e+00, mean_x =    0.2337    0.4705    1.7669    0.2360    0.1758 
+CMA-ES gen  80: fbest = 1.376996e+03, sigma = 2.5219e+00, mean_x =    0.1771    0.5024    2.3634    0.2705    0.1830 
+CMA-ES gen  90: fbest = 1.257845e+03, sigma = 2.8660e+00, mean_x =    0.1213    0.5284    3.1922    0.3821    0.1603 
+CMA-ES gen 100: fbest = 9.470684e+02, sigma = 4.5507e+00, mean_x =    0.0966    0.5528    4.4566    0.3588    0.0898 
+CMA-ES gen 110: fbest = 8.502048e+02, sigma = 3.2536e+00, mean_x =    0.0702    0.5142    5.5095    0.3959    0.0597 
+CMA-ES gen 120: fbest = 8.020763e+02, sigma = 4.5731e+00, mean_x =    0.0502    0.4897    7.1359    0.1923    0.0699 
+CMA-ES gen 130: fbest = 7.596465e+02, sigma = 2.3222e+00, mean_x =    0.0446    0.5026    8.2518    0.2712    0.0496 
+CMA-ES gen 140: fbest = 7.336581e+02, sigma = 5.9598e+00, mean_x =    0.0376    0.5208    9.9129    0.3512    0.0387 
+CMA-ES gen 150: fbest = 7.114596e+02, sigma = 7.2574e+00, mean_x =    0.0306    0.5183   11.9910    0.2325    0.0476 
+CMA-ES gen 160: fbest = 7.020147e+02, sigma = 4.7957e+00, mean_x =    0.0279    0.5407   13.3947    0.3867    0.0460 
+CMA-ES gen 170: fbest = 7.015757e+02, sigma = 2.3853e+00, mean_x =    0.0276    0.5365   13.5193    0.3784    0.0478 
+CMA-ES gen 180: fbest = 7.014397e+02, sigma = 1.8374e+00, mean_x =    0.0273    0.5336   13.6021    0.3668    0.0481 
+CMA-ES gen 190: fbest = 7.013218e+02, sigma = 1.4434e+00, mean_x =    0.0273    0.5359   13.6280    0.3823    0.0469 
+CMA-ES gen 200: fbest = 7.012813e+02, sigma = 1.0106e+00, mean_x =    0.0273    0.5357   13.6393    0.3825    0.0484 
+CMA-ES stop: TolFun (eff = 7.0128e-02) reached at gen 200
+Restart 9: chi2 = 701.281290, par = [0.0273 0.5358 13.6459 0.3833 0.0482]
+Relaunch IMPROVED restart 9: chi2 17054.5522 -> 701.2813
+
+Adaptive relaunch summary: 2 relaunch(es) executed (cap 3).
+
+Cross-restart H spread RAW       (n=10): 0.3981 (flag if > 0.05)
+Cross-restart H spread FILTERED  (n=10): 0.3981
+Trapped restart indices (chi^2 >= 5.0x best): zeros(1,0)
+
+Stage 2: Pattern search refinement (5 local starts)...
+
+--- Stage 2 local start 1/5 ---
+Pattern search: d=5, init mesh = 2.5000e+00 2.4950e-01 1.2495e+00 9.9900e-02 2.3500e-02 
+PS iter   1: fbest = 7.012668e+02, mesh_max = 1.2500e+00, nFEval = 19
+PS iter  10: fbest = 7.012590e+02, mesh_max = 3.9062e-02, nFEval = 154
+PS iter  20: fbest = 7.012559e+02, mesh_max = 2.4414e-03, nFEval = 308
+PS iter  30: fbest = 7.012517e+02, mesh_max = 6.1034e-04, nFEval = 447
+PS stop: no relative improvement of 0.20% in 30 iterations at iter 30 (nFEval=447, fbest=7.012517e+02)
+PS start 1: chi2 = 701.251712, par = [0.0273 0.5350 13.6327 0.3810 0.0484]
+
+--- Stage 2 local start 2/5 ---
+Pattern search: d=5, init mesh = 2.5000e+00 2.4950e-01 1.2495e+00 9.9900e-02 2.3500e-02 
+PS iter   1: fbest = 7.012664e+02, mesh_max = 1.2500e+00, nFEval = 19
+PS iter  10: fbest = 7.012609e+02, mesh_max = 3.9062e-02, nFEval = 154
+PS iter  20: fbest = 7.012608e+02, mesh_max = 2.4414e-03, nFEval = 302
+PS iter  30: fbest = 7.012550e+02, mesh_max = 6.1034e-04, nFEval = 431
+PS stop: no relative improvement of 0.20% in 30 iterations at iter 30 (nFEval=431, fbest=7.012550e+02)
+PS start 2: chi2 = 701.255005, par = [0.0273 0.5350 13.6328 0.3810 0.0484]
+
+--- Stage 2 local start 3/5 ---
+Pattern search: d=5, init mesh = 2.5000e+00 2.4950e-01 1.2495e+00 9.9900e-02 2.3500e-02 
+PS iter   1: fbest = 7.012696e+02, mesh_max = 1.2500e+00, nFEval = 19
+PS iter  10: fbest = 7.012672e+02, mesh_max = 3.9062e-02, nFEval = 164
+PS iter  20: fbest = 7.012671e+02, mesh_max = 9.7654e-03, nFEval = 294
+PS iter  30: fbest = 7.012499e+02, mesh_max = 2.4414e-03, nFEval = 421
+PS stop: no relative improvement of 0.20% in 30 iterations at iter 30 (nFEval=421, fbest=7.012499e+02)
+PS start 3: chi2 = 701.249888, par = [0.0273 0.5349 13.6334 0.3792 0.0480]
+
+--- Stage 2 local start 4/5 ---
+Pattern search: d=5, init mesh = 2.5000e+00 2.4950e-01 1.2495e+00 9.9900e-02 2.3500e-02 
+PS iter   1: fbest = 7.925194e+02, mesh_max = 2.5000e+00, nFEval = 9
+PS iter  10: fbest = 7.033469e+02, mesh_max = 3.1249e-01, nFEval = 126
+PS iter  20: fbest = 7.013394e+02, mesh_max = 1.9531e-02, nFEval = 261
+PS iter  30: fbest = 7.012914e+02, mesh_max = 1.9531e-02, nFEval = 382
+PS iter  40: fbest = 7.012857e+02, mesh_max = 7.8123e-02, nFEval = 484
+PS stop: no relative improvement of 0.20% in 30 iterations at iter 42 (nFEval=520, fbest=7.012857e+02)
+PS start 4: chi2 = 701.285733, par = [0.0273 0.5351 13.6282 0.3835 0.0488]
+
+--- Stage 2 local start 5/5 ---
+Pattern search: d=5, init mesh = 2.5000e+00 2.4950e-01 1.2495e+00 9.9900e-02 2.3500e-02 
+PS iter   1: fbest = 7.012756e+02, mesh_max = 1.2500e+00, nFEval = 19
+PS iter  10: fbest = 7.012675e+02, mesh_max = 1.5625e-01, nFEval = 141
+PS iter  20: fbest = 7.012632e+02, mesh_max = 9.7654e-03, nFEval = 285
+PS iter  30: fbest = 7.012563e+02, mesh_max = 9.7654e-03, nFEval = 405
+PS stop: no relative improvement of 0.20% in 30 iterations at iter 30 (nFEval=405, fbest=7.012563e+02)
+PS start 5: chi2 = 701.256256, par = [0.0273 0.5352 13.6331 0.3821 0.0487]
+
+Final evaluation at the converged optimum...
+
+Stage 3: Out-of-sample binding-function check...
+In-sample  chi2 = 701.249888
+Out-of-sample chi2 = 705.827132  (ratio = 1.007)
+
+Stage 3b: Empirical MC noise floor at the optimum (10 seeds)...
+Noise floor: mean(chi2) = 706.8229, std(chi2) = 3.5278 over 10 seeds
+Signal-to-noise: chi2_min / std(chi2) = 198.78
+
+Saved to results_rough_heston_LHAR_new2.mat (attempt 1)
+Finished: 27-May-2026 17:59:56

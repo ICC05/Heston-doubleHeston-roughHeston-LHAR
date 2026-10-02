@@ -1,0 +1,65 @@
+======================================================================
+  Double Heston  +  LHAR
+======================================================================
+
+--- Structural Parameter Estimates ---
+
+  Parameter            Estimate
+  ---------            --------
+  kappa1               3.685076
+  kappa2               0.001000
+  Vbar1                0.163338
+  Vbar2                0.125037
+  sigma1               0.859544
+  sigma2               0.209203
+  rho1                 0.998932
+  rho2                -0.685764
+
+  Objective (chi2)        = 7.027798
+  Objective OOS chi2      = 174.627301  (ratio 24.848)
+  Cross-restart rho1 spread = 1.9484, rho2 spread = 1.3228
+
+--- Stage 1 CMA-ES per-restart chi^2 ---
+  Restart 1: chi^2 = 65.909660
+  Restart 2: chi^2 = 13.138076
+  Restart 3: chi^2 = 19.205164
+  Restart 4: chi^2 = 59.487367
+  Restart 5: chi^2 = 263.246697
+  Restart 6: chi^2 = 7.715892
+  Restart 7: chi^2 = 80.780685
+  Restart 8: chi^2 = 58.242684
+  Restart 9: chi^2 = 17137.267716
+  Restart 10: chi^2 = 59.864780
+
+--- Auxiliary Parameters: Empirical vs Simulated at Optimum ---
+
+  Parameter     Empirical    Simulated         Diff     SE(diff)    t_stat   chi2_i
+  ---------     ---------    ---------         ----     --------    ------   ------
+  alpha          0.370805     0.299240    -0.071566     0.009468     -7.56    -6.65
+  beta_d         0.249254     0.255995     0.006741     0.000975      6.91     4.21
+  beta_w         0.384238     0.406297     0.022059     0.002810      7.85    13.93
+  beta_m         0.269332     0.259036    -0.010296     0.002470     -4.17    -6.17
+  gamma_d       -0.011903    -0.010162     0.001741     0.000394      4.42    -0.12
+  gamma_w       -0.015881    -0.018835    -0.002955     0.000855     -3.46     1.75
+  gamma_m        0.003552     0.011069     0.007517     0.034661      0.22     0.04
+  var(eps)       0.262058     0.263029     0.000971     0.001382      0.70     0.04
+
+  Sum chi2_i = 7.0278   (total chi^2 = 7.0278)
+  |t| > 2 on: alpha, beta_d, beta_w, beta_m, gamma_d, gamma_w -> these moments are misfitted beyond MC noise.
+
+--- Derived Quantities ---
+
+  Factor 1:
+    kappa1 = 3.6851,  half-life = 0.19 days
+    Vbar1  = 0.163338  (annualized = 41.161147)
+    sigma1 = 0.8595,  Feller ratio = 1.6294
+    rho1   = 0.9989
+  Factor 2:
+    kappa2 = 0.0010,  half-life = 693.15 days
+    Vbar2  = 0.125037  (annualized = 31.509367)
+    sigma2 = 0.2092,  Feller ratio = 0.0057
+    rho2   = -0.6858
+  Total unconditional variance (ann.): 72.670514
+  Total unconditional volatility (ann. %): 8.5247
+
+======================================================================

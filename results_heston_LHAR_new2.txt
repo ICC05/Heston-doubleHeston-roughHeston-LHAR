@@ -1,0 +1,54 @@
+======================================================================
+  Heston  +  LHAR
+======================================================================
+
+--- Structural Parameter Estimates ---
+
+  Parameter            Estimate
+  ---------            --------
+  kappa                0.001000
+  Vbar                 5.000000
+  sigma_v              0.165743
+  rho                 -0.973324
+
+  Objective (chi2)        = 719.956690
+  Objective OOS chi2      = 723.095745  (ratio 1.004)
+  Cross-restart rho spread  = 1.9931
+
+--- Stage 1 CMA-ES per-restart chi^2 ---
+  Restart 1: chi^2 = 754.000393
+  Restart 2: chi^2 = 753.996552
+  Restart 3: chi^2 = 746.931844
+  Restart 4: chi^2 = 753.990152
+  Restart 5: chi^2 = 753.993128
+  Restart 6: chi^2 = 720.011603
+  Restart 7: chi^2 = 719.984473
+  Restart 8: chi^2 = 742.764469
+  Restart 9: chi^2 = 754.015158
+  Restart 10: chi^2 = 742.775964
+
+--- Auxiliary Parameters: Empirical vs Simulated at Optimum ---
+
+  Parameter     Empirical    Simulated         Diff     SE(diff)    t_stat   chi2_i
+  ---------     ---------    ---------         ----     --------    ------   ------
+  alpha          0.370805     0.087427    -0.283378     0.000912   -310.87   288.46
+  beta_d         0.249254     0.789950     0.540696     0.004183    129.26  -1565.18
+  beta_w         0.384238     0.117153    -0.267085     0.004003    -66.71  1080.22
+  beta_m         0.269332     0.068604    -0.200728     0.001562   -128.49   857.34
+  gamma_d       -0.011903    -0.002107     0.009796     0.000079    124.33    45.12
+  gamma_w       -0.015881    -0.002481     0.013399     0.000074    181.72    13.61
+  gamma_m        0.003552    -0.004406    -0.007958     0.000151    -52.59    -0.44
+  var(eps)       0.262058     0.257642    -0.004416     0.004404     -1.00     0.83
+
+  Sum chi2_i = 719.9567   (total chi^2 = 719.9567)
+  |t| > 2 on: alpha, beta_d, beta_w, beta_m, gamma_d, gamma_w, gamma_m -> these moments are misfitted beyond MC noise.
+
+--- Derived Quantities ---
+
+  Half-life of variance (days):        693.15
+  Unconditional variance (annualized): 1260.000000
+  Unconditional volatility (ann. %):   35.4965
+  Feller ratio (2*kappa*Vbar/sigma^2): 0.3640
+  Leverage (rho):                      -0.9733
+
+======================================================================
